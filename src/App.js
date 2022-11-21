@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// Importing svg logo
+import logo from "./logo.svg";
+// Importing CSS
+import "./App.css";
+// Import components
+import ReUsableComponent from "./ReUsableComponent";
 
+// Javascript Function, but with capital letter
+// Must have capital letter
 function App() {
+  // Any vanilla JavaScript logic can go here
+  const arr = ["one", "two", "three"];
+  // Return statement contains JSX (HTML)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Intro to React </h1>
+      {arr.map((item, index) => {
+        return <ReUsableComponent />;
+      })}
     </div>
   );
 }
 
 export default App;
+
+// const arr = ["one", "two", "three"];
+
+// const newArr = arr.map((item, index) => {
+//   return item + "!"
+// })
+// console.log(newArr)
+// // ["one!", "two!", "three!"]
+// // "one" 0
+// // "two" 1
+// // "three" 2
